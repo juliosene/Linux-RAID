@@ -47,7 +47,7 @@
     "publicIPAddressType": "Dynamic",
     "vhdStorageContainerName": "vhds",
     "vmName": "MyUbuntuVM",
-    "vmSize": "Standard_D1",
+    "vmSize": "Standard_D2",
     "virtualNetworkName": "MyVNET",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
@@ -187,6 +187,24 @@
               "lun": 1,
               "vhd": {
                 "uri": "[concat('http://', variables('vhdStorageName'),'.blob.core.windows.net/vmlun/', variables('DataDiskName'), '02.vhd')]"
+              },
+              "createOption": "Empty"
+            },            
+            {
+              "name": "datadisk2",
+              "diskSizeGB": "500",
+              "lun": 2,
+              "vhd": {
+                "uri": "[concat('http://', variables('vhdStorageName'),'.blob.core.windows.net/vmlun/', variables('DataDiskName'), '03.vhd')]"
+              },
+              "createOption": "Empty"
+            },            
+            {
+              "name": "datadisk2",
+              "diskSizeGB": "500",
+              "lun": 3,
+              "vhd": {
+                "uri": "[concat('http://', variables('vhdStorageName'),'.blob.core.windows.net/vmlun/', variables('DataDiskName'), '04.vhd')]"
               },
               "createOption": "Empty"
             }
