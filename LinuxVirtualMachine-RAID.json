@@ -196,7 +196,7 @@
               "createOption": "Empty"
             },            
             {
-              "name": "datadisk2",
+              "name": "datadisk3",
               "diskSizeGB": "500",
               "lun": 2,
               "vhd": {
@@ -205,7 +205,7 @@
               "createOption": "Empty"
             },            
             {
-              "name": "datadisk2",
+              "name": "datadisk4",
               "diskSizeGB": "500",
               "lun": 3,
               "vhd": {
