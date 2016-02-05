@@ -71,14 +71,14 @@ fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --fi
 
 echo " "
 echo "*************************************************************************"
-echo "*********************** Fio Performance Test 100% read ******************"
+echo "****************** Fio Performance Test 100% rand read ******************"
 echo "*************************************************************************"
 echo " "
-fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=$block_dev --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75
+fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=$block_dev --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=randread
 
 echo " "
 echo "*************************************************************************"
-echo "********************* Fio Performance Test 100% write *******************"
+echo "**************** Fio Performance Test 100% rand write *******************"
 echo "*************************************************************************"
 echo " "
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=$block_dev --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=randwrite
